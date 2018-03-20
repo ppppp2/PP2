@@ -4,6 +4,7 @@
   <artifactId>PP2</artifactId>
   <version>1.0.0</version>
   <name>PP2</name>
+  
   <dependencies>
   	<dependency>
     	<groupId>junit</groupId>
@@ -19,13 +20,8 @@
     				<groupId>org.eluder.coveralls</groupId>
     				<artifactId>coveralls-maven-plugin</artifactId>
     				<version>4.3.0</version>
-    				<configuration>
-        			<repoToken>zLoVbmejgrROiZqRREZy0JdE9QnGzV0N1</repoToken>
-   					</configuration>
 				</plugin>		
 			</plugins>
 		</pluginManagement>
-	
-	
 	</build>
 </project>
