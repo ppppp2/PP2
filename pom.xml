@@ -29,27 +29,43 @@
 			<version>3.15</version>
 	  </dependency>
 	  
-	  <dependency>
-   		 <groupId>org.jacoco</groupId>
-    		<artifactId>org.jacoco.agent</artifactId>
-   		 <version>0.8.0</version>
-   		 <scope>test</scope>
-	</dependency>
+	  
 </dependencies>
 
 	<build>
 		<pluginManagement>
 			<plugins>
 				<plugin>
-    				<groupId>org.eluder.coveralls</groupId>
-    				<artifactId>coveralls-maven-plugin</artifactId>
-    				<version>4.3.0</version>
-				<configuration>
-					<repoToken>P5DCd6GXVdNNa2OoaOGR1OkB5cppbcqvP</repoToken>
-				</configuration>
-				</plugin>		
+                			<groupId>org.eluder.coveralls</groupId>
+               				 <artifactId>coveralls-maven-plugin</artifactId>
+               				 <version>4.1.0</version>
+
+              		  <configuration>
+                  	 		 <coberturaReports>
+                      				  <coberturaReport>
+                         		 	  ${basedir}/target/coverage.xml
+                     			 	  </coberturaReport>
+                   			 </coberturaReports>
+                   		 <sourceEncoding>UTF-8</sourceEncoding>
+                   		 <serviceName>travis-ci</serviceName>
+                  		  <serviceJobId>${env.TRAVIS_JOB_ID} </serviceJobId>
+               		 </configuration>
+            	</plugin>		
 			
 			</plugins>
+			<plugin>
+				<groupId>org.jacoco</groupId>
+				<artifactId>jacoco-maven-plugin</artifactId>
+				<version>0.7.6.201602180812</version>
+				<executions>
+					<execution>
+						<id>prepare-agent</id>
+						<goals>
+							<goal>prepare-agent</goal>
+						</goals>
+					</execution>
+				</executions>
+			</plugin>
 		</pluginManagement>
 	</build>
 </project>
