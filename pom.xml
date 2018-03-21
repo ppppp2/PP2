@@ -33,7 +33,7 @@
 </dependencies>
 
 	<build>
-		<pluginManagement>
+		
 			<plugins>
 				<plugin>
                 			<groupId>org.eluder.coveralls</groupId>
@@ -66,6 +66,6 @@
 					</execution>
 				</executions>
 			</plugin>
-		</pluginManagement>
+		
 	</build>
 </project>
