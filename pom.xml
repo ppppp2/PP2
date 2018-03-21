@@ -15,17 +15,26 @@
 	</properties>	
 	
   <dependencies>
-  	<dependency>
-    	<groupId>junit</groupId>
-    	<artifactId>junit</artifactId>
+  	
+	  <dependency>
+    		<groupId>junit</groupId>
+    		<artifactId>junit</artifactId>
    		<version>4.12</version>
    	 	<scope>test</scope>
 	  </dependency>
+	  
 	  <dependency>
 			<groupId>org.apache.poi</groupId>
 			<artifactId>poi-ooxml</artifactId>
 			<version>3.15</version>
-		</dependency>
+	  </dependency>
+	  
+	  <dependency>
+   		 <groupId>org.jacoco</groupId>
+    		<artifactId>org.jacoco.agent</artifactId>
+   		 <version>0.8.0</version>
+   		 <scope>test</scope>
+	</dependency>
 </dependencies>
 
 	<build>
@@ -39,17 +48,7 @@
 					<repoToken>P5DCd6GXVdNNa2OoaOGR1OkB5cppbcqvP</repoToken>
 				</configuration>
 				</plugin>		
-			<plugin>
-				<groupId>org.jacoco</groupId>
-				<artifactId>jacoco-maven-plugin</artifactId>
-				<version>0.7.6.201602180812</version>
-				<executions>
-					<execution>
-						<id>prepare-agent</id>
-						
-					</execution>
-				</executions>
-			</plugin>
+			
 			</plugins>
 		</pluginManagement>
 	</build>
